@@ -40,6 +40,7 @@
 
 #ifdef ESP_IDF_COMP_SPI_FLASH_ENABLED
 #include "esp_spi_flash.h"
+#include "esp_flash_spi_init.h"
 #include "esp_partition.h"
 #endif
 
