@@ -26,6 +26,7 @@ use crate::common::{SDKCONFIG_DEFAULTS_FILE, SDKCONFIG_FILE};
 const ESP_IDF_VERSION_VAR: &str = "ESP_IDF_VERSION";
 const ESP_IDF_REPOSITORY_VAR: &str = "ESP_IDF_REPOSITORY";
 pub const ESP_IDF_CMAKE_GENERATOR: &str = "ESP_IDF_CMAKE_GENERATOR";
+pub const ESP_IDF_EXTRA_COMPONENT_DIRS_VAR: &str = "ESP_IDF_EXTRA_COMPONENT_DIRS";
 
 const DEFAULT_ESP_IDF_VERSION: &str = "v4.4.1";
 
@@ -113,6 +114,7 @@ fn build_cargo_first() -> Result<EspIdfBuildOutput> {
     cargo::track_env_var(ESP_IDF_REPOSITORY_VAR);
     cargo::track_env_var(ESP_IDF_SDKCONFIG_DEFAULTS_VAR);
     cargo::track_env_var(ESP_IDF_SDKCONFIG_VAR);
+    cargo::track_env_var(ESP_IDF_EXTRA_COMPONENT_DIRS_VAR);
     cargo::track_env_var(MCU_VAR);
 
     let cmake_generator = get_cmake_generator()?;
