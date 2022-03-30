@@ -223,4 +223,8 @@
 #include "host/util/util.h"
 #endif
 
+#ifndef CONFIG_ESP_CONSOLE_UART_NONE
+#include "esp_console.h"
+#endif
+
 #endif
