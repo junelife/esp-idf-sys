@@ -225,6 +225,8 @@
 
 #ifndef CONFIG_ESP_CONSOLE_UART_NONE
 #include "esp_console.h"
+#include "linenoise/linenoise.h"
+#include "argtable3/argtable3.h"
 #endif
 
 #endif
