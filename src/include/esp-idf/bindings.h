@@ -128,6 +128,11 @@
 // TODO: Include all XXX_periph.h headers here
 #include "soc/gpio_periph.h"
 #endif
+#ifndef CONFIG_ESP_CONSOLE_UART_NONE
+#include "esp_console.h"
+#include "linenoise/linenoise.h"
+#include "argtable3/argtable3.h"
+ #endif
 
 #include "driver/adc.h"
 #include "driver/twai.h"
