@@ -395,4 +395,9 @@
 
 #endif // CONFIG_BT_ENABLED
 
+// CONFIG_HEAP_TASK_TRACKING
+#ifdef CONFIG_HEAP_TASK_TRACKING
+#include "esp_heap_task_info.h"
+#endif // CONFIG_HEAP_TASK_TRACKING
+
 #endif // CONFIG_IDF_TARGET_ESP32S2
